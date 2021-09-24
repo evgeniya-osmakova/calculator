@@ -1,38 +1,84 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  padding: 1rem;
+  --input-length: 15rem;
+  --btn-length: 6rem;
+}
+
+.calculating-area {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+
+.calculating-area__input {
+  width: var(--input-length);
+  padding: 0.5rem;
+  margin-right: 0.4rem;
+}
+
+.calculating-area__btn {
+  width: var(--btn-length);
+  cursor: pointer;
+  font-weight: 700;
   color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 3px;
+  background: rgb(64,199,129);
+  box-shadow: 0 -3px rgb(53,167,110) inset;
+  transition: 0.2s;
+  border: none;
+  margin: 0.2rem 0;
 }
 
-.App-link {
-  color: #61dafb;
+.calculating-area__btn:hover {
+  background: rgb(53, 167, 110);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.error {
+  height: 1rem;
+  color: red;
+  font-size: 0.7rem;
+  padding-bottom: 1rem;
+}
+
+.historyItem {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.historyItem:not(:last-child) {
+  padding-bottom: 1rem;
+}
+
+.historyItem__data {
+  width: var(--input-length);
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 3px;
+  margin-right: 0.4rem;
+}
+
+.historyItem__btn {
+  width: var(--btn-length);
+  cursor: pointer;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 3px;
+  background: red;
+  transition: 0.2s;
+  border: none;
+  margin: 0.2rem 0;
+}
+
+.historyItem__btn:hover {
+  background: rgb(220,20,60);
 }
